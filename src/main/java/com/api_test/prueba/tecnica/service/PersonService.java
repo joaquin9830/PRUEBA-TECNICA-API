@@ -2,6 +2,7 @@ package com.api_test.prueba.tecnica.service;
 
 
 import com.api_test.prueba.tecnica.modelo.Person;
+import com.api_test.prueba.tecnica.modelo.Movie;
 import com.api_test.prueba.tecnica.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -41,7 +42,7 @@ public class PersonService {
         if (newPersonData.getFirstName() != null) person.setFirstName(newPersonData.getFirstName());
         if (newPersonData.getLastName() != null) person.setLastName(newPersonData.getLastName());
         if (newPersonData.getBirthdate() != null) person.setBirthdate(newPersonData.getBirthdate());
-        if (newPersonData.isHasInsurance() != null) person.setHasInsurance(newPersonData.isHasInsurance());
+        person.setHasInsurance(newPersonData.isHasInsurance());
         return personRepository.save(person);
     }
 
