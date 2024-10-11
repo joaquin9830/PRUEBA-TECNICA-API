@@ -10,17 +10,15 @@ import lombok.Data;
 @Data
 @Entity
 public class Movie {
-    //Atributo Id
+    //Atributos de la clase
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    //Atributos de la clase
+   
     private String title;
     private String genre;
 
     //Getter y setter
-
     public Long getId() {
         return id;
     }
