@@ -22,6 +22,7 @@ public class Person {
 
     private LocalDate birthdate;
 
+    
     @Column(name = "has_insurance")
     private boolean hasInsurance;
 
